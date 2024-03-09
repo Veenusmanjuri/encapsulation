@@ -1,0 +1,33 @@
+class Student:
+    def __init__(self, name, age):
+        self.__name = name  # Private attribute
+        self.__age = age    # Private attribute
+
+    # Getter methods
+    def get_name(self):
+        return self.__name
+
+    def get_age(self):
+        return self.__age
+
+    # Setter methods
+    def set_name(self, new_name):
+        self.__name = new_name
+
+    def set_age(self, new_age):
+        self.__age = new_age
+
+# Create an instance of the Student class
+student1 = Student("John", 20)
+
+# Accessing attributes using getter methods
+print(f"Student Name: {student1.get_name()}")
+print(f"Student Age: {student1.get_age()}")
+
+# Modifying attributes using setter methods
+student1.set_name("Jane")
+student1.set_age(21)
+
+# Display updated attributes
+print(f"Updated Student Name: {student1.get_name()}")
+print(f"Updated Student Age: {student1.get_age()}")
